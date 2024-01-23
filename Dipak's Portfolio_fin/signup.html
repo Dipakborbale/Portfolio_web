@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="signup.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    
+    <div class="container">
+     
+
+        <ul class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <!-- <li><a href="#">Pictures</a></li>
+          <li><a href="#">Summer 15</a></li> -->
+          <li>Sign Up</li>
+        </ul>
+     
+      <div class="title">Sign Up</div>
+      <div class="content">
+        <form id="registrationForm" action="#" onsubmit="return validateForm()">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Full Name</span>
+              <input type="text" id="fullName" placeholder="Enter your name" required>
+              <span id="fullNameError" class="error"></span>
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input type="text" id="email" placeholder="Enter your Email" required>
+              <span id="emailError" class="error"></span>
+            </div>
+            <div class="input-box">
+              <span class="details">Date Of Birth</span>
+              <input type="date" id="dob" placeholder="Enter your DOB" required>
+              <span id="dobError" class="error"></span>
+            </div>
+            <div class="input-box">
+              <span class="details">Phone Number</span>
+              <input type="text" id="phoneNumber" placeholder="Enter your number" required>
+              <span id="phoneNumberError" class="error"></span>
+            </div>
+            <div class="input-box">
+              <span class="details">Password</span>
+              <input type="password" id="password" placeholder="Enter your password" required>
+              <span id="passwordError" class="error"></span>
+            </div>
+            <div class="input-box">
+              <span class="details">Confirm Password</span>
+              <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+              <span id="confirmPasswordError" class="error"></span>
+            </div>
+          </div>
+          <div class="gender-details">
+            <input type="radio" name="gender" id="dot-1" required>
+            <input type="radio" name="gender" id="dot-2" required>
+            <span class="gender-title">Gender</span>
+            <div class="category">
+              <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="gender">Male</span>
+              </label>
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span class="gender">Female</span>
+              </label>
+            </div>
+          </div>
+          <div class="button">
+            <input type="submit" value="Register">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function validateForm() {
+        var fullName = document.getElementById('fullName').value;
+        var email = document.getElementById('email').value;
+        var dob = document.getElementById('dob').value;
+        var phoneNumber = document.getElementById('phoneNumber').value;
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirmPassword').value;
+
+        // Example validation (you may want to customize these)
+        if (fullName.trim() === '') {
+          document.getElementById('fullNameError').innerText = 'Full Name is required';
+          return false;
+        } else {
+          document.getElementById('fullNameError').innerText = '';
+        }
+
+        // Add more validations for other fields...
+
+        return true;
+      }
+    </script>
+  </body>
+</html>

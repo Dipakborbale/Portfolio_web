@@ -1,0 +1,60 @@
+h1.t-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #myTable {
+
+    border-collapse: collapse;
+  
+    width: 100%;
+  
+  }
+  
+  #myTable td, #myTable th {
+  
+    border: 1px solid #ddd;
+  
+    padding: 8px;
+  
+  }
+  
+   
+  
+  #myTable tr.even{
+  
+    background-color: #ddd;
+  
+  }
+  
+   
+  
+  #myTable tr.odd{
+  
+    background-color: white;
+  
+  }
+ 
+  #myTable tr:hover{
+  
+    /* background-color: aquamarine; */
+    background-color: grey;
+  
+  }
+ 
+  div#myTable_length.dataTables_length{
+  
+    padding-bottom: 2%;
+  
+    font-size: 130%;
+  
+  }
+ 
+  div#myTable_filter.dataTables_filter{
+  
+    padding-bottom: 2%;
+  
+    font-size: 130%;
+  
+  }
